@@ -1,0 +1,73 @@
+.App {
+	text-align: center;
+}
+.jokesWrapper {
+	display: flex;
+}
+.jokeList {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+.joke {
+	display: flex;
+	flex-direction: column;
+	padding: 15px;
+	max-width: 800px;
+	width: 100%;
+}
+.joke:nth-child(even) {
+	background-color: rgb(211, 255, 240);
+}
+
+header {
+	width: 100%;
+	background-color: gray;
+	padding: 10px 0;
+	font-size: 1.5rem;
+}
+nav {
+	display: flex;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+}
+main {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+input {
+	padding: 5px;
+	margin: 5px;
+}
+button {
+	padding: 2px 15px 5px;
+	background-color: rgb(60, 118, 224);
+	border-radius: 4px;
+	color: #fff;
+	cursor: pointer;
+	border: none;
+	font-size: 1.2rem;
+}
+button:hover {
+	background-color: rgb(33, 90, 196);
+	border-radius: 4px;
+	color: #fff;
+	border: none;
+}
+.error {
+	width: 100%;
+	background-color: red;
+	color: white;
+	font-size: 1.6rem;
+	padding: 5px;
+	margin-bottom: 10px;
+}
