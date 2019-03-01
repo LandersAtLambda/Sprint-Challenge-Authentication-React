@@ -26,6 +26,8 @@ function Login(props) {
 			.then(res => {
 				console.log(res);
 				localStorage.setItem('jwt', res.data.token);
+				localStorage.setItem('username', res.data.username);
+
 				props.history.push('/jokes');
 			})
 			.catch(err => {

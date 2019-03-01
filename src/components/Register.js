@@ -5,6 +5,7 @@ function Login(props) {
 	const [value, setValue] = useState({
 		username: '',
 		password: '',
+		message: '',
 	});
 
 	const handleChange = e => {
@@ -26,27 +27,34 @@ function Login(props) {
 				console.log(res);
 				props.history.push('/login');
 			})
-			.catch(err => console.log(err));
+			.catch(err => {
+				console.log(err);
+				setValue({ message: err.message });
+			});
 	};
 	return (
-		<form onSubmit={e => submitRegister(e)}>
-			<input
-				name="username"
-				type="text"
-				value={value.username}
-				placeholder="username"
-				onChange={e => handleChange(e)}
-			/>
-			<input
-				name="password"
-				type="password"
-				value={value.password}
-				placeholder="password"
-				onChange={e => handleChange(e)}
-			/>
+		<div>
+			{value.message ? <div className="error">{value.message}</div> : null}
 
-			<button type="submit">Register</button>
-		</form>
+			<form onSubmit={e => submitRegister(e)}>
+				<input
+					name="username"
+					type="text"
+					value={value.username}
+					placeholder="username"
+					onChange={e => handleChange(e)}
+				/>
+				<input
+					name="password"
+					type="password"
+					value={value.password}
+					placeholder="password"
+					onChange={e => handleChange(e)}
+				/>
+
+				<button type="submit">Register</button>
+			</form>
+		</div>
 	);
 }
 

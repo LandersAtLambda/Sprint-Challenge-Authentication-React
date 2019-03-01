@@ -30,6 +30,7 @@ header {
 }
 nav {
 	display: flex;
+	justify-content: space-between;
 	max-width: 800px;
 	width: 100%;
 	margin: 0 auto;
@@ -70,4 +71,16 @@ button:hover {
 	font-size: 1.6rem;
 	padding: 5px;
 	margin-bottom: 10px;
+}
+.username {
+	color: white;
+}
+.navLeft {
+	display: flex;
+}
+.navRight {
+	display: flex;
+}
+.navRight div {
+	padding: 0 10px;
 }
